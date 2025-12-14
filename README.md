@@ -7,7 +7,7 @@ This application is designed to help NGOs submit monthly reports (individually o
 The application is deployed live with the following details:
 
 | Component | Link |
-| **Frontend Demo Link** | **`https://ngos-report-managment.vercel.app/dashboard`** |
+| **Frontend Demo Link** | **`https://ngos-report-managment.vercel.app/`** |
 | **Backend Demo Link** | **`https://ngos-report-managment-1.onrender.com`**
 
 ### Admin Demo Credentials
