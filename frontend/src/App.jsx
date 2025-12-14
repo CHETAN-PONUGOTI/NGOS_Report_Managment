@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import ReportPage from './pages/ReportPage';
 import UploadPage from './pages/UploadPage';
 import DashboardPage from './pages/DashboardPage';
-import LoginPage from './pages/LoginPage'; // NEW
+import LoginPage from './pages/LoginPage';
 import Navbar from './components/Navbar';
 
 const App = () => {

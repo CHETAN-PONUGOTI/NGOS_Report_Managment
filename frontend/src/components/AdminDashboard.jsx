@@ -73,13 +73,11 @@ const AdminDashboard = () => {
 
     return (
         <div>
-            {/* NEW LAYOUT: Use flex-col on mobile, flex-row on md screens, and mb-4 spacing */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
                 <h1 className="text-3xl font-bold text-gray-800 mb-4 md:mb-0">
                     Admin Dashboard
                 </h1>
                 
-                {/* Controls: Month Selector and Logout (Aligned horizontally on all sizes) */}
                 <div className="flex flex-row space-x-3 items-center w-full md:w-auto justify-end">
                     <label htmlFor="month-selector" className="text-sm font-medium text-gray-700 whitespace-nowrap">
                         Select Month:
@@ -89,7 +87,6 @@ const AdminDashboard = () => {
                         id="month-selector"
                         value={month}
                         onChange={handleMonthChange}
-                        // Reduced input width for mobile
                         className="input-field w-[120px] text-sm" 
                     />
                     <button onClick={handleLogout} className="secondary-button py-1 px-3 text-sm">
@@ -98,11 +95,9 @@ const AdminDashboard = () => {
                 </div>
             </div>
 
-            {/* Title moved here, directly below the main header/controls */}
             <div className="mb-6 mt-4">
                 <h2 className="text-xl font-semibold text-gray-700">Summary for {month}</h2>
             </div>
-            {/* END OF NEW LAYOUT */}
 
 
             {loading && <Spinner />} 

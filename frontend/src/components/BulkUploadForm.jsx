@@ -60,7 +60,6 @@ const BulkUploadForm = () => {
                 <h2 className="text-2xl font-semibold mb-6 text-gray-800">Bulk Report Upload (CSV)</h2>
                 <div className="mb-4 p-4 border border-blue-200 bg-blue-50 rounded-lg text-sm text-blue-800">
                     <p className="font-semibold">Required CSV Columns:</p>
-                    {/* ADDED: break-words to prevent text overflow */}
                     <code className="block mt-1 break-words">ngo_id,month,people_helped,events_conducted,funds_utilized</code> 
                 </div>
                 {status && (

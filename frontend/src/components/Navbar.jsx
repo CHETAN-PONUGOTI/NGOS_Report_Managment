@@ -15,14 +15,13 @@ const Navbar = () => {
                     Impact Tracker
                 </div>
                 <nav>
-                    <ul className="flex space-x-2 sm:space-x-4"> {/* Adjusted spacing for mobile */}
+                    <ul className="flex space-x-2 sm:space-x-4">
                         {navItems.map((item) => (
                             <li key={item.name}>
                                 <NavLink
                                     to={item.path}
                                     className={({ isActive }) =>
                                         `font-medium transition duration-150 ease-in-out ${
-                                            // ADDED: text-xs on mobile, text-sm on small screens and up
                                             isActive
                                                 ? 'text-gray-1000 border-b-2 border-white-600 py-1 text-xs sm:text-sm'
                                                 : 'text-gray-700 hover:text-gray-900 text-xs sm:text-sm'
