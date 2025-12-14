@@ -49,7 +49,6 @@ const bulkReportUpload = async (req, res) => {
 
     try {
         const stream = bufferStream.cork();
-        // Pipe the buffer to csv-parser
         require('stream').Readable.from(req.file.buffer)
             .pipe(csv({
                 mapValues: ({ header, value }) => {
