@@ -5,7 +5,8 @@ const BulkUploadForm = () => {
     const [file, setFile] = useState(null);
     const [status, setStatus] = useState(null);
     const [jobId, setJobId] = useState(null);
-    const API_URL = 'http://localhost:3000/api/report/upload';
+    const API_BASE_URL = import.meta.env.VITE_REACT_APP_API_BASE_URL;
+    const API_URL = `${API_BASE_URL}/api/report/upload`;
 
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
@@ -59,7 +60,8 @@ const BulkUploadForm = () => {
                 <h2 className="text-2xl font-semibold mb-6 text-gray-800">Bulk Report Upload (CSV)</h2>
                 <div className="mb-4 p-4 border border-blue-200 bg-blue-50 rounded-lg text-sm text-blue-800">
                     <p className="font-semibold">Required CSV Columns:</p>
-                    <code className="block mt-1">ngo_id,month,people_helped,events_conducted,funds_utilized</code>
+                    {/* ADDED: break-words to prevent text overflow */}
+                    <code className="block mt-1 break-words">ngo_id,month,people_helped,events_conducted,funds_utilized</code> 
                 </div>
                 {status && (
                     <div className={`p-3 mb-4 rounded-lg ${

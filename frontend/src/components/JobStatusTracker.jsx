@@ -3,7 +3,10 @@ import React, { useState, useEffect } from 'react';
 const JobStatusTracker = ({ jobId }) => {
     const [jobStatus, setJobStatus] = useState(null);
     const [loading, setLoading] = useState(true);
-    const API_URL = `http://localhost:3000/api/job-status/${jobId}`;
+
+    const API_BASE_URL = import.meta.env.VITE_REACT_APP_API_BASE_URL
+
+    const API_URL = `${API_BASE_URL}/api/job-status/${jobId}`;
 
     const fetchJobStatus = async () => {
         try {

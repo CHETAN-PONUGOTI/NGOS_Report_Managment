@@ -9,22 +9,23 @@ const Navbar = () => {
     ];
 
     return (
-        <header className="bg-[#753A2F] shadow-md sticky top-0 z-10">
+        <header className="bg-[#96483C] shadow-md sticky top-0 z-10">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-                <div className="text-sm lg:text-3xl font-bold text-black-800">
+                <div className="text-xl font-bold text-gray-1000">
                     Impact Tracker
                 </div>
                 <nav>
-                    <ul className="flex space-x-4">
+                    <ul className="flex space-x-2 sm:space-x-4"> {/* Adjusted spacing for mobile */}
                         {navItems.map((item) => (
                             <li key={item.name}>
                                 <NavLink
                                     to={item.path}
                                     className={({ isActive }) =>
                                         `font-medium transition duration-150 ease-in-out ${
+                                            // ADDED: text-xs on mobile, text-sm on small screens and up
                                             isActive
-                                                ? 'text-black-600 border-b-2 border-black-600 py-1'
-                                                : 'text-[#1C1313]-500 hover:text-black-600'
+                                                ? 'text-gray-1000 border-b-2 border-white-600 py-1 text-xs sm:text-sm'
+                                                : 'text-gray-700 hover:text-gray-900 text-xs sm:text-sm'
                                         }`
                                     }
                                 >

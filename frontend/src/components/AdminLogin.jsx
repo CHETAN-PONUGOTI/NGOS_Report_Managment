@@ -6,7 +6,8 @@ const AdminLogin = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
     const navigate = useNavigate();
-    const API_URL = 'http://localhost:3000/api/auth/login';
+    const API_BASE_URL = import.meta.env.VITE_REACT_APP_API_BASE_URL
+    const API_URL = `${API_BASE_URL}/api/auth/login`;
 
     const handleSubmit = async (e) => {
         e.preventDefault();

@@ -9,7 +9,10 @@ const SingleReportForm = () => {
         funds_utilized: 0.00
     });
     const [status, setStatus] = useState(null);
-    const API_URL = 'http://localhost:3000/api/report';
+
+    const API_BASE_URL = import.meta.env.VITE_REACT_APP_API_BASE_URL
+
+    const API_URL = `${API_BASE_URL}/api/report`;
 
     const handleChange = (e) => {
         const { name, value } = e.target;
